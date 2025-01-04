@@ -16,15 +16,21 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
-python-dotenv = "^1.0.0"
-
-
+python-dotenv = "^1.0.1"
 
 [tool.poetry.group.dev.dependencies]
-alfred-cli = "^2.1.1"
-mypy = "^1.4.1"
-pytest = "^7.4.0"
+alfred-cli = "^2.2.7"
+mypy = "^1.14.1"
+pytest = "^8.3.4"
+ruff = "^0.8.6"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
