@@ -16,12 +16,12 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
-python-dotenv = "^1.0.1"
+python-dotenv = "^1.0.0"
 
 [tool.poetry.group.dev.dependencies]
-alfred-cli = "^2.2.7"
-mypy = "^1.14.1"
-pytest = "^8.3.4"
+alfred-cli = "^3.0.0"
+mypy = "^1.20.2"
+pytest = "^9.0.3"
 ruff = "^0.8.6"
 
 [build-system]
@@ -33,4 +33,17 @@ ignore_missing_imports = true
 
 [tool.ruff]
 line-length = 120
-indent-width = 4
+
+[tool.ruff.lint.pycodestyle]
+max-line-length = 320
+
+[tool.ruff.lint.per-file-ignores]
+# "app/migrations/*" = ["E501"]
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+exclude = [
+]

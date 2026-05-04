@@ -1,4 +1,4 @@
-FROM python:3.12 as builder
+FROM python:3.12 AS builder
 
 RUN mkdir -p /app
 WORKDIR /app
@@ -7,7 +7,7 @@ RUN pip3 install poetry
 COPY . /app
 RUN poetry install --without dev
 
-FROM python:3.12 as base
+FROM python:3.12 AS base
 
 COPY --from=builder /app /app
 

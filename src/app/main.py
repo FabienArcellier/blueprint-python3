@@ -2,5 +2,5 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-if __name__ == "__main__":
-    print("hello world")
+if __name__ == '__main__':
+    print('hello world')

@@ -14,5 +14,6 @@ poetry add python-dotenv@latest
 poetry add --dev alfred-cli@latest
 poetry add --dev mypy@latest
 poetry add --dev pytest@latest
+poetry add --dev ruff@latest
 ```
 
